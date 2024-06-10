@@ -19,6 +19,10 @@ function App() {
 		currentPage: 1,
 	})
 
+	const [lithuaniaSize, setLithuaniaSize] = useState<number | undefined>(
+		undefined,
+	)
+
 	const itemsPerPage = 10
 
 	const lastItemIndex = filters.currentPage * itemsPerPage
@@ -37,7 +41,7 @@ function App() {
 					})
 					.filter(country => {
 						if (filters.area) {
-							return country.area && country.area < 65300
+							return country.area && country.area < (lithuaniaSize as number)
 						}
 						return country
 					})
@@ -51,11 +55,18 @@ function App() {
 					})
 			)
 		},
-		[countryList],
+		[countryList, lithuaniaSize],
 	)
 
 	useEffect(() => {
-		setFilteredCountries(countryList)
+		if (countryList) {
+			setFilteredCountries(countryList)
+
+			const lithuaniaIndex = countryList?.findIndex(
+				country => country.name === 'Lithuania',
+			) as number
+			setLithuaniaSize(countryList[lithuaniaIndex].area)
+		}
 	}, [countryList])
 
 	useEffect(() => {
