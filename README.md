@@ -19,3 +19,5 @@ An finished assignment for REIZ TECH Front-End Developer intern position. This p
 - React
 - Tailwind
 - shad/cn components library
+
+[DEMO VERSION](https://r-t-bf5v.onrender.com/) (Could possibly need to be refreshed because of poor API performance)
