@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# Country Data Visualization Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An finished assignment for REIZ TECH Front-End Developer intern position. This project is a visual representation of country data using the [REST Countries API](https://restcountries.com). It displays country names, regions, and area sizes and includes features such as sorting, filtering, and pagination.
 
-Currently, two official plugins are available:
+## Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetches data from the REST Countries API.
+- Displays a list of countries with their names, regions, and area sizes.
+- Sorts the list alphabetically by name (ascending and descending).
+- Filters countries:
+  - That are smaller than Lithuania by area.
+  - That are in the "Oceania" region.
+- Implements pagination for easy navigation through the list.
+- Written in TypeScript for type safety and maintainability.
 
-## Expanding the ESLint configuration
+## Technologies used:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Vite
+- React
+- Tailwind
+- shad/cn components library
